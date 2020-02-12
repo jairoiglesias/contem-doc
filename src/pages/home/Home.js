@@ -84,7 +84,7 @@ const Home = () => {
               color = 'yellow';
             }
             return (
-              <Tag color={color} key={tag}>
+              <Tag color={color} key={Math.random()}>
                 {tag.toUpperCase()}
               </Tag>
             );

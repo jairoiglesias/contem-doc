@@ -64,6 +64,7 @@ export class MapScreen extends Component {
         >
           {ships.map(ship => (
             <Marker
+            key={Math.random()}
               onClick={() => this.onClickMap(ship)}
               onMouseover={() => console.log("teste")}
               name={"Current location"}

@@ -5,8 +5,9 @@ import { createBrowserHistory } from 'history';
 
 import './style.css';
 
+import { HashRouter } from 'react-router-dom';
+
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
 
@@ -16,15 +17,12 @@ import createStore from './Redux/store';
 
 import Home from './pages/home/Home';
 import Terminal from './pages/Terminal';
-import Desembaraco from './pages/Desembaraco';
+// import Desembaraco from './pages/Desembaraco';
 import MapScreen from './pages/Terminal/Map';
-
-type Props = {};
-type State = {};
 
 const history = createBrowserHistory();
 
-class App extends PureComponent<Props, State> {
+class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
@@ -35,14 +33,14 @@ class App extends PureComponent<Props, State> {
 
     return (
       <Provider store={store}>
-        <Router history={history}>
+        <HashRouter history={history}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/terminal" component={Terminal} />
-            <Route exact path="/desembaraco" component={Desembaraco} />
+            {/* <Route exact path="/desembaraco" component={Desembaraco} /> */}
             <Route exact path="/map" component={MapScreen} />
           </Switch>
-        </Router>
+        </HashRouter>
       </Provider>
     );
   }

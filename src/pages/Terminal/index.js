@@ -46,6 +46,7 @@ class Terminal extends React.PureComponent {
                   fontSize: '14px',
                   color: 'rgba(0, 0, 0, 0.4)',
                 }}
+                key={Math.random()}
               >
                 {item.title}
               </Typography.Title>
@@ -53,6 +54,7 @@ class Terminal extends React.PureComponent {
               <Row>
                 {item.orgaos.map(orgao => (
                   <Tag
+                  key={Math.random()}
                     color="green"
                     style={{ marginRight: '10px', marginTop: '10px' }}
                   >

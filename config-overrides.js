@@ -12,7 +12,6 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: {
       '@primary-color': '#f17140',
-      
     },
   }),
 );
